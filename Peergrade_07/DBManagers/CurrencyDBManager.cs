@@ -147,10 +147,5 @@ namespace IHW4.DBManagers
                return false;
            }
        }
-
-       public static bool RemoveRate(string name1, string name2)
-       {
-           
-       }
     }
 }
