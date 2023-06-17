@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IHW4</name>
+    </assembly>
+    <members>
+        <member name="T:IHW4.Controllers.AdminController">
+            <summary>
+            Контроллер администратора.
+            </summary>
+        </member>
+        <member name="M:IHW4.Controllers.AdminController.Post(System.String,System.String,System.Decimal)">
+            <summary>
+            Добавление/изменение курса валют
+            </summary>
+            <returns> Результат запроса </returns>
+        </member>
+        <member name="T:IHW4.Controllers.CurrencyController">
+            <summary>
+            Контроллер.
+            </summary>
+        </member>
+        <member name="M:IHW4.Controllers.CurrencyController.Get">
+            <summary>
+            Получение информации о курсе валют
+            </summary>
+            <returns> Результат запроса </returns>
+        </member>
+        <member name="M:IHW4.Controllers.CurrencyController.Post(System.String,System.String,System.Decimal)">
+            <summary>
+            Преобразование валюты
+            </summary>
+            <returns> Результат запроса </returns>
+        </member>
+        <member name="T:IHW4.DBManagers.CurrencyDBManager">
+            <summary>
+            Набор методов для взаимодействия с БД
+            </summary>
+        </member>
+        <member name="M:IHW4.DBManagers.CurrencyDBManager.AddCurrencyRate(IHW4.Models.CurrencyRate)">
+            <summary>
+            Добавление нового курса валют
+            </summary>
+            <param name="rate"> Информация о курсе </param>
+            <returns> Индикатор операции добавления строки в таблицу </returns>
+        </member>
+        <member name="M:IHW4.DBManagers.CurrencyDBManager.GetList">
+            <summary>
+            Получение курса валют
+            </summary>
+            <returns> Список курсов </returns>
+        </member>
+        <member name="M:IHW4.DBManagers.CurrencyDBManager.GetRate(System.String,System.String)">
+            <summary>
+            Получение информации о курсе двух валют
+            </summary>
+            <param name="name1"> Обозначение 1-ой валюты </param>
+            <param name="name2"> Обозначение 2-ой валюты </param>
+            <returns> Курс </returns>
+        </member>
+        <member name="M:IHW4.DBManagers.CurrencyDBManager.UpdateRate(IHW4.Models.CurrencyRate)">
+            <summary>
+            Обновление курса
+            </summary>
+            <param name="rate"> Информация о курсе </param>
+            <returns> Индикатор операции </returns>
+        </member>
+        <member name="T:IHW4.Models.CurrencyRate">
+            <summary>
+            Информация о курсе валют
+            </summary>
+        </member>
+        <member name="P:IHW4.Models.CurrencyRate.From">
+            <summary>
+            Исходная валюта
+            </summary>
+        </member>
+        <member name="P:IHW4.Models.CurrencyRate.To">
+            <summary>
+            Конечная валюта
+            </summary>
+        </member>
+        <member name="P:IHW4.Models.CurrencyRate.Rate">
+            <summary>
+            Стоимость единицы исходной валюты в конечной
+            </summary>
+        </member>
+    </members>
+</doc>
