@@ -96,8 +96,8 @@ namespace IHW4.DBManagers
        /// <summary>
        /// Получение информации о курсе двух валют
        /// </summary>
-       /// <param name="name1"> Обозначение 1-ой валюты </param>
-       /// <param name="name2"> Обозначение 2-ой валюты </param>
+       /// <param name="name1"> Обозначение исходной валюты </param>
+       /// <param name="name2"> Обозначение целевой валюты </param>
        /// <returns> Курс </returns>
         public static CurrencyRate GetRate(string name1, string name2)
         {

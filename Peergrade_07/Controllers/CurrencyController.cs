@@ -13,7 +13,7 @@ namespace IHW4.Controllers
         /// <summary>
         /// Получение информации о курсе валют
         /// </summary>
-        /// <returns> Результат запроса </returns>
+        /// <returns> Список пар валют с курсом </returns>
         [HttpGet("rates")]
         public IActionResult Get()
         {
@@ -24,7 +24,10 @@ namespace IHW4.Controllers
         /// <summary>
         /// Преобразование валюты
         /// </summary>
-        /// <returns> Результат запроса </returns>
+        /// <param name="from"> Обозначение исходной валюты </param>
+        /// <param name="to"> Обозначение целевой валюты </param>
+        /// <param name="value"> Количество исходной валюты </param>
+        /// <returns> Количество целевой валюты </returns>
         [HttpPost("exchange")]
         public IActionResult Post(string from, string to, decimal value)
         {

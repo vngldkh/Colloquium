@@ -13,7 +13,7 @@ namespace IHW4.Models
         public string From { get; }
         
         /// <summary>
-        /// Конечная валюта
+        /// Целевая валюта
         /// </summary>
         public string To { get; }
         

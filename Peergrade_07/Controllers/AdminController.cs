@@ -15,6 +15,9 @@ namespace IHW4.Controllers
         /// <summary>
         /// Добавление/изменение курса валют
         /// </summary>
+        /// <param name="from"> Обозначение исходной валюты </param>
+        /// <param name="to"> Обозначение целевой валюты </param>
+        /// <param name="rate"> Курс </param>
         /// <returns> Результат запроса </returns>
         [HttpPost("update")]
         public IActionResult Post(string from, string to, decimal rate)

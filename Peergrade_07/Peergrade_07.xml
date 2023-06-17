@@ -13,6 +13,9 @@
             <summary>
             Добавление/изменение курса валют
             </summary>
+            <param name="from"> Обозначение исходной валюты </param>
+            <param name="to"> Обозначение целевой валюты </param>
+            <param name="rate"> Курс </param>
             <returns> Результат запроса </returns>
         </member>
         <member name="T:IHW4.Controllers.CurrencyController">
@@ -24,13 +27,16 @@
             <summary>
             Получение информации о курсе валют
             </summary>
-            <returns> Результат запроса </returns>
+            <returns> Список пар валют с курсом </returns>
         </member>
         <member name="M:IHW4.Controllers.CurrencyController.Post(System.String,System.String,System.Decimal)">
             <summary>
             Преобразование валюты
             </summary>
-            <returns> Результат запроса </returns>
+            <param name="from"> Обозначение исходной валюты </param>
+            <param name="to"> Обозначение целевой валюты </param>
+            <param name="value"> Количество исходной валюты </param>
+            <returns> Количество целевой валюты </returns>
         </member>
         <member name="T:IHW4.DBManagers.CurrencyDBManager">
             <summary>
@@ -54,8 +60,8 @@
             <summary>
             Получение информации о курсе двух валют
             </summary>
-            <param name="name1"> Обозначение 1-ой валюты </param>
-            <param name="name2"> Обозначение 2-ой валюты </param>
+            <param name="name1"> Обозначение исходной валюты </param>
+            <param name="name2"> Обозначение целевой валюты </param>
             <returns> Курс </returns>
         </member>
         <member name="M:IHW4.DBManagers.CurrencyDBManager.UpdateRate(IHW4.Models.CurrencyRate)">
@@ -77,7 +83,7 @@
         </member>
         <member name="P:IHW4.Models.CurrencyRate.To">
             <summary>
-            Конечная валюта
+            Целевая валюта
             </summary>
         </member>
         <member name="P:IHW4.Models.CurrencyRate.Rate">
